@@ -1,55 +1,131 @@
-# D2C Customer Churn Intelligence & Retention API
+# D2C Customer Churn Intelligence - Data Audit & EDA
 
-## Part 1: Data Audit & Exploratory Data Analysis (EDA)
+## Project Overview
 
-### Project Objective
-This project performs data auditing and exploratory data analysis on a D2C customer dataset to identify data quality issues, customer behavior patterns, and business insights.
+This repository contains the Data Audit and Exploratory Data Analysis (EDA) phase of the D2C Customer Churn Intelligence project.
 
-### Dataset
-- orders.csv
-- customers.csv
-- churn_labels.csv
-- intervention_history.csv
-- support_tickets.csv
-- web_events_snapshot.csv
+The objective is to understand customer purchasing behavior, product performance, customer satisfaction, delivery experience, and support interactions before building customer segmentation and churn prediction models.
 
-### Analysis Performed
-- Dataset shape and structure analysis
-- Missing value analysis
-- Duplicate record detection
+---
+
+## Dataset Description
+
+### Orders Dataset
+
+Contains customer transaction information including:
+
+- Order ID
+- Customer ID
+- Order Date
+- Product Category
+- Quantity
+- Gross Amount
+- Discount Percentage
+- Delivery Days
+- Return Status
+- Customer Rating
+
+### Support Tickets Dataset
+
+Contains customer support interaction data including:
+
+- Ticket ID
+- Customer ID
+- Ticket Date
+- Issue Type
+- Support Channel
+- Resolution Hours
+- Sentiment Score
+- Reopened Status
+
+---
+
+## Project Structure
+
+```text
+d2c-eda-audit/
+│
+├── data/
+│   ├── orders.csv
+│   └── support_tickets.csv
+│
+├── notebooks/
+│   └── eda_audit.ipynb
+│
+├── visuals/
+│
+├── business_memo.md
+├── data_quality_report.md
+├── README.md
+└── requirements.txt
+```
+
+---
+
+## Analysis Performed
+
+### Data Audit
+
+- Dataset structure inspection
 - Data type validation
-- Descriptive statistics
-- Customer behavior analysis
-- Order trends analysis
-- Revenue analysis
-
-### Key Findings
-- Customer purchase patterns were analyzed.
-- Revenue distribution was examined.
-- Data quality issues were identified and documented.
-- Business insights were generated for future retention strategies.
-
-### Outputs
-- EDA notebook
+- Missing value analysis
 - Summary statistics
-- Visualizations
 - Data quality assessment
 
-### Technologies Used
+### Exploratory Data Analysis
+
+- Product category distribution
+- Revenue by category
+- Returned vs Non-returned orders
+- Customer rating distribution
+- Delivery days vs ratings
+- Support issue analysis
+- Reopened ticket analysis
+- Sentiment score distribution
+- Resolution time by support channel
+- Correlation analysis
+
+---
+
+## Key Findings
+
+- Skin Care generated the highest number of orders and revenue.
+- Most customers provided high ratings (4–5 stars).
+- Product return rates were relatively low.
+- Late delivery was among the most common support issues.
+- Most support tickets were resolved without reopening.
+- Customer sentiment varied, with some tickets showing negative sentiment.
+- Correlation between delivery days, ratings, discounts, and revenue was generally weak.
+
+---
+
+## Business Insights
+
+1. Negative customer sentiment may indicate future churn risk.
+2. Delivery-related issues can impact customer satisfaction.
+3. Returned orders may signal unmet customer expectations.
+4. Reopened support tickets require special attention.
+5. Revenue concentration in a few categories increases business risk.
+
+---
+
+## Technologies Used
+
 - Python
 - Pandas
 - NumPy
 - Matplotlib
 - Jupyter Notebook
 
-### Project Structure
-```
-d2c-eda-audit/
-│
-├── data/
-├── notebooks/
-├── reports/
-├── visuals/
-├── README.md
-└── requirements.txt
-```
+---
+
+## Future Work
+
+- RFM Customer Segmentation
+- Customer Retention Strategy
+- Churn Prediction Model
+- FastAPI Churn Scoring API
+
+---
+
+Capstone Project: D2C Customer Churn Intelligence & Retention API
