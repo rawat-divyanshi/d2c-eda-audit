@@ -1,4 +1,6 @@
 # D2C Customer Churn Intelligence - Data Audit & EDA
+## Part 1: Data Audit & Exploratory Data Analysis 
+
 
 ## Project Overview
 
